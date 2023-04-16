@@ -1,0 +1,12 @@
+-- Вывести отдел с самой высокой заработной платой между сотрудниками.
+
+USE DigitalDesign
+
+SELECT TOP 1
+	DEPARTMENT.NAME
+
+FROM DEPARTMENT
+JOIN EMPLOYEE ON DEPARTMENT.ID = EMPLOYEE.DEPARTMENT_ID
+
+GROUP BY DEPARTMENT.NAME
+ORDER BY AVG(SALARY) DESC

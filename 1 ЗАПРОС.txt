@@ -1,0 +1,11 @@
+-- Вывести сотрудника с максимальной заработной платой
+
+USE DigitalDesign
+
+SELECT 
+	EMPLOYEE.NAME
+
+FROM DEPARTMENT
+JOIN EMPLOYEE ON DEPARTMENT.ID = EMPLOYEE.DEPARTMENT_ID 
+	
+	WHERE [SALARY] = (SELECT MAX(SALARY) FROM EMPLOYEE)

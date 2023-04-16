@@ -1,0 +1,10 @@
+-- Сотрудник, чье имя начинается на "Р" и заканчивается на "н" 
+
+USE DigitalDesign
+
+SELECT 
+	[NAME]
+FROM EMPLOYEE
+
+WHERE [NAME] LIKE '[Р]%' 
+AND [NAME] LIKE '%[н]';
